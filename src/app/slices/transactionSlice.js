@@ -4,7 +4,7 @@ export const fetchAllTransaction = createAsyncThunk(
   "allTransaction/fetchAllTransaction",
   async (user) => {
     const res = await axios.get(
-      `http://localhost:5000/all-transaction/${user?.email}`,
+      `https://shohoj-pay-server.onrender.com/all-transaction/${user?.email}`,
       {
         headers: {
           authorization: `Bearer ${localStorage.getItem("accessToken")}`,

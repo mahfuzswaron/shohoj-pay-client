@@ -35,7 +35,7 @@ const WithdrawSavings = () => {
       time,
     };
 
-    fetch("http://localhost:5000/withdraw-savings", {
+    fetch("https://shohoj-pay-server.onrender.com/withdraw-savings", {
       method: "POST",
       headers: {
         "content-type": "application/json",

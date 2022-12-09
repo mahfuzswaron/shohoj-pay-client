@@ -18,7 +18,7 @@ const ManageAdmin = () => {
 
   const onSubmit = (data) => {
     const email = data.email;
-    fetch("http://localhost:5000/manageAdmin", {
+    fetch("https://shohoj-pay-server.onrender.com/manageAdmin", {
       method: "PUT",
       headers: {
         email: email,

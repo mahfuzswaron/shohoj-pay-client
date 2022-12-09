@@ -50,7 +50,7 @@ const RequestMoney = () => {
       image: mongoUser?.avatar,
     };
 
-    fetch("http://localhost:5000/requestMoney", {
+    fetch("https://shohoj-pay-server.onrender.com/requestMoney", {
       method: "POST",
       headers: {
         "content-type": "application/json",

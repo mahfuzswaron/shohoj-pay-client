@@ -84,7 +84,7 @@ const Settings = () => {
   };
 
   const updateUser = (updatedUser) => {
-    fetch("http://localhost:5000/updateUserInfo", {
+    fetch("https://shohoj-pay-server.onrender.com/updateUserInfo", {
       method: "PUT",
       headers: {
         "content-type": "application/json",

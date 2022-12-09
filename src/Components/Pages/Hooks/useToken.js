@@ -12,7 +12,7 @@ const useToken = (user) => {
     const userEmail = user?.user?.email || user?.email;
     if (userEmail) {
       setTokenLoading(true);
-      fetch(`http://localhost:5000/getjwttoken/${userEmail}`)
+      fetch(`https://shohoj-pay-server.onrender.com/getjwttoken/${userEmail}`)
         .then((res) => res.json())
         .then((data) => {
           if (data?.token) {

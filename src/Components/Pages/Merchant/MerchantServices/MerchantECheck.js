@@ -50,7 +50,7 @@ const MerchantECheck = () => {
       image: mongoUser?.avatar,
     };
 
-    fetch("http://localhost:5000/eCheck", {
+    fetch("https://shohoj-pay-server.onrender.com/eCheck", {
       method: "POST",
       headers: {
         "content-type": "application/json",

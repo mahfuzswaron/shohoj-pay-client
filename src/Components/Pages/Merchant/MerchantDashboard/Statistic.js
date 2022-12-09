@@ -7,7 +7,7 @@ const Statistic = ({ user }) => {
   const [data, setData] = useState([]);
   useEffect(() => {
     fetch(
-      `http://localhost:5000/get-transaction-amount-by-type/${user?.email}`,
+      `https://shohoj-pay-server.onrender.com/get-transaction-amount-by-type/${user?.email}`,
       {
         headers: {
           authorization: `Bearer ${localStorage.getItem("accessToken")}`,

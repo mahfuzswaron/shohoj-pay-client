@@ -78,7 +78,7 @@ const Dashboard = () => {
   // GET MONTH SERVICE DATA
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/getServices`, {
+      .get(`https://shohoj-pay-server.onrender.com/getServices`, {
         headers: {
           "content-type": "application/json",
           authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -183,9 +183,8 @@ const Dashboard = () => {
     Amount: ${data.amount}$
     Email: ${data.email}
     Name: ${data.userName ? data.userName : data.name}
-    TRX ID: ${
-      data.transactionId ? data.transactionId : "Transaction Id Not Available"
-    }
+    TRX ID: ${data.transactionId ? data.transactionId : "Transaction Id Not Available"
+      }
     Date: ${data.fullDate}
     Time: ${data.time}
     Type: ${data.type}
@@ -307,17 +306,16 @@ const Dashboard = () => {
                           </div>
                           <div>
                             <h3
-                              className={`text-2xl amount-style font-medium  text-right md-amount-responsive ${
-                                transAction.type === "Add Money" ||
-                                transAction.type === "Receive Money" ||
-                                transAction.type === "Transfer Savings"
+                              className={`text-2xl amount-style font-medium  text-right md-amount-responsive ${transAction.type === "Add Money" ||
+                                  transAction.type === "Receive Money" ||
+                                  transAction.type === "Transfer Savings"
                                   ? "text-green-600"
                                   : "text-red-600"
-                              }`}
+                                }`}
                             >
                               {transAction.type === "Add Money" ||
-                              transAction.type === "Receive Money" ||
-                              transAction.type === "Transfer Savings"
+                                transAction.type === "Receive Money" ||
+                                transAction.type === "Transfer Savings"
                                 ? "+" + transAction.amount
                                 : "-" + transAction.amount}
                               $

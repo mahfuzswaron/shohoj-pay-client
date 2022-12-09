@@ -4,7 +4,7 @@ export const fetchUserEmailInfo = createAsyncThunk(
   "allData/fetchUserEmailInfo",
   async (user) => {
     const res = await axios.get(
-      `http://localhost:5000/user-all-info/${user?.email}`,
+      `https://shohoj-pay-server.onrender.com/user-all-info/${user?.email}`,
       {
         headers: {
           authorization: `Bearer ${localStorage.getItem("accessToken")}`,

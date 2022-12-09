@@ -47,7 +47,7 @@ import MerchantDashboard from "./Components/Pages/Merchant/MerchantDashboard/Mer
 import { fetchNotifications } from "./app/slices/notificationSlice";
 import { useDispatch } from "react-redux";
 import io from "socket.io-client";
-export const socket = io.connect("http://localhost:5000");
+export const socket = io.connect("https://shohoj-pay-server.onrender.com");
 
 // Live notification sender
 export const sendNotification = (email, message) => {

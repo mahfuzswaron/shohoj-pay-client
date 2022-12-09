@@ -14,7 +14,7 @@ const RevenueCard = () => {
   const loadRevenue = async () => {
     try {
       setInfoLoading(true);
-      fetch("http://localhost:5000/getShohojPayInfo", {
+      fetch("https://shohoj-pay-server.onrender.com/getShohojPayInfo", {
         headers: {
           authorization: `Bearer ${localStorage.getItem("accessToken")}`,
         },
@@ -51,9 +51,8 @@ const RevenueCard = () => {
           <p className="">{date}</p>
           <button
             onClick={() => loadRevenue()}
-            class={`btn btn-xs btn-ghost btn-primary ${
-              infoLoading && "loading"
-            }`}
+            class={`btn btn-xs btn-ghost btn-primary ${infoLoading && "loading"
+              }`}
           >
             Reload Revenue
           </button>

@@ -58,7 +58,7 @@ const SignUp = () => {
     }
 
     const emailCheckResponse = await axios.get(
-      `http://localhost:5000/checkemailexists/${email}`
+      `https://shohoj-pay-server.onrender.com/checkemailexists/${email}`
     );
     if (emailCheckResponse?.data?.error) {
       dispatch(updateSignUpLoading(false));
@@ -101,7 +101,7 @@ const SignUp = () => {
     delete userInfo.password;
     delete userInfo.ConfirmPassword;
 
-    const userUploadRes = await fetch("http://localhost:5000/createAccount", {
+    const userUploadRes = await fetch("https://shohoj-pay-server.onrender.com/createAccount", {
       method: "POST",
       headers: {
         "content-type": "application/json",

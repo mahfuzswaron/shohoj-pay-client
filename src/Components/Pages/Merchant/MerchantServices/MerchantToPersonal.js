@@ -46,7 +46,7 @@ const MerchantToPersonal = () => {
       image: mongoUser?.avatar,
     };
 
-    fetch("http://localhost:5000/merchant-to-personal", {
+    fetch("https://shohoj-pay-server.onrender.com/merchant-to-personal", {
       method: "POST",
       headers: {
         "content-type": "application/json",

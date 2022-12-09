@@ -4,7 +4,7 @@ import axios from "axios";
 export const fetchTransactionReport = createAsyncThunk(
   "transactions/getTransactionReport",
   async (month) => {
-    const res = await axios.get("http://localhost:5000/getTransactionReport", {
+    const res = await axios.get("https://shohoj-pay-server.onrender.com/getTransactionReport", {
       headers: {
         "content-type": "application/json",
         authorization: `Bearer ${window.localStorage.getItem("accessToken")}`,

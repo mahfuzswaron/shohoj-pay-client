@@ -5,7 +5,7 @@ export const fetchUserInfo = createAsyncThunk(
     "userInfo/fetchUserInfo",
     async (user) => {
         const res = await axios.get(
-            `http://localhost:5000/getUserInfo`,
+            `https://shohoj-pay-server.onrender.com/getUserInfo`,
             {
                 headers: {
                     authorization: `Bearer ${localStorage.getItem("accessToken")}`,

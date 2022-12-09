@@ -3,7 +3,7 @@ import axios from "axios";
 export const fetchAllAdmin = createAsyncThunk(
   "allAdmin/getAllAdmin",
   async () => {
-    const res = await axios.get(`http://localhost:5000/getAllAdmin`, {
+    const res = await axios.get(`https://shohoj-pay-server.onrender.com/getAllAdmin`, {
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
       },

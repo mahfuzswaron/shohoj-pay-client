@@ -3,7 +3,7 @@ import axios from "axios";
 export const fetchAllUser = createAsyncThunk(
   "allUser/getAllUser",
   async (query) => {
-    const res = await axios.get(`http://localhost:5000/getAllUser`, {
+    const res = await axios.get(`https://shohoj-pay-server.onrender.com/getAllUser`, {
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
         query: query,

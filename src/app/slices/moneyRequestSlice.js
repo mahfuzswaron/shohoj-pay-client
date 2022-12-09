@@ -4,7 +4,7 @@ import axios from "axios";
 export const fetchMoneyRequest = createAsyncThunk(
   "allMoneyRequest/getMoneyRequest",
   async ({ email, type }) => {
-    const res = await axios.get("http://localhost:5000/getRequests", {
+    const res = await axios.get("https://shohoj-pay-server.onrender.com/getRequests", {
       headers: {
         "content-type": "application/json",
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

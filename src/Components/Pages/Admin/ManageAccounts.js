@@ -29,7 +29,7 @@ const ManageAccounts = () => {
 
   // User acc status update
   const updateUserStatus = (email, action) => {
-    fetch("http://localhost:5000/updateAccountStatus", {
+    fetch("https://shohoj-pay-server.onrender.com/updateAccountStatus", {
       method: "PUT",
       headers: {
         email: email,

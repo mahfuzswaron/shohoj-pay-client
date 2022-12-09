@@ -22,7 +22,7 @@ const MoneyRequests = ({ setRequestForConfirm }) => {
 
   const fetchRequests = () => {
     setRequestLoading(true);
-    fetch("http://localhost:5000/getRequests", {
+    fetch("https://shohoj-pay-server.onrender.com/getRequests", {
       method: "GET",
       headers: {
         "content-type": "application/json",
@@ -60,17 +60,15 @@ const MoneyRequests = ({ setRequestForConfirm }) => {
           <div className="btn-group mt-8 mb-4">
             <button
               onClick={() => setType("incoming")}
-              className={`btn btn-primary btn-outline btn-sm ${
-                type === "incoming" && "btn-active"
-              }`}
+              className={`btn btn-primary btn-outline btn-sm ${type === "incoming" && "btn-active"
+                }`}
             >
               Incoming
             </button>
             <button
               onClick={() => setType("outgoing")}
-              className={`btn btn-primary btn-outline btn-sm ${
-                type !== "incoming" && "btn-active"
-              }`}
+              className={`btn btn-primary btn-outline btn-sm ${type !== "incoming" && "btn-active"
+                }`}
             >
               Outgoing
             </button>
@@ -180,9 +178,8 @@ const MoneyRequests = ({ setRequestForConfirm }) => {
                             onClick={() =>
                               setRequestForConfirm([request, fetchRequests])
                             }
-                            className={`btn btn-xs btn-primary ${
-                              request.status === "Approved" && "btn-disabled"
-                            }`}
+                            className={`btn btn-xs btn-primary ${request.status === "Approved" && "btn-disabled"
+                              }`}
                           >
                             Approve{request.status === "Approved" && "d"}
                           </label>

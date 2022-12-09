@@ -8,7 +8,7 @@ const useUser = (user) => {
     const email = user?.user?.email || user?.email;
     if (email) {
       setMongoUserLoading(true);
-      fetch("http://localhost:5000/getUserInfo", {
+      fetch("https://shohoj-pay-server.onrender.com/getUserInfo", {
         method: "GET",
         headers: {
           email,

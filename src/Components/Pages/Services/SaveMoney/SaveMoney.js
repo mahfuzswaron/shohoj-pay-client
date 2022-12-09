@@ -40,7 +40,7 @@ const SaveMoney = () => {
       time,
     };
 
-    fetch("http://localhost:5000/saveMoney", {
+    fetch("https://shohoj-pay-server.onrender.com/saveMoney", {
       method: "POST",
       headers: {
         "content-type": "application/json",

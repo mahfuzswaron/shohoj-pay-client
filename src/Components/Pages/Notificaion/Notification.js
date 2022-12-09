@@ -24,7 +24,7 @@ const Notification = () => {
 
   useEffect(() => {
     if (pathName === "/notification" && unseenNotifications.length > 0) {
-      fetch("http://localhost:5000/updateNotificationStatus", {
+      fetch("https://shohoj-pay-server.onrender.com/updateNotificationStatus", {
         method: "PATCH",
         headers: {
           "content-type": "application/json",

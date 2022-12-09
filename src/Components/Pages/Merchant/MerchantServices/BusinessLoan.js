@@ -33,7 +33,7 @@ const BusinessLoan = () => {
       day,
     };
     toast.loading("request in progress...", { id: "progressToast" });
-    const fetchUrl = "http://localhost:5000/request-business-loan";
+    const fetchUrl = "https://shohoj-pay-server.onrender.com/request-business-loan";
     fetch(fetchUrl, {
       method: "POST",
       headers: {

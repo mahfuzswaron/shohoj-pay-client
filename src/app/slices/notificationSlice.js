@@ -4,7 +4,7 @@ import axios from "axios";
 export const fetchNotifications = createAsyncThunk(
   "allNotifications/getNotifications",
   async (email) => {
-    const res = await axios.get("http://localhost:5000/getNotification", {
+    const res = await axios.get("https://shohoj-pay-server.onrender.com/getNotification", {
       headers: {
         "content-type": "application/json",
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
